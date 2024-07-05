@@ -8,7 +8,7 @@ await loginPage.login('standard_user','secret_sauce');
 expect(await loginPage.getPageTitle()).toBe('Products');
 });
 
-test.only('locked_out_user', async ({ page }) => {
+test('locked_out_user', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.visit();
   await loginPage.login('locked_out_user','secret_sauce');
